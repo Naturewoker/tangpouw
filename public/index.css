@@ -1,0 +1,108 @@
+* {
+    box-sizing: border-box;
+  }
+
+body   
+{  
+
+background-size: cover;  
+font-family: sans-serif;  
+background-color: rgb(9, 56, 158);  
+}
+
+#container {
+    width: 95vw;
+    height: 80vw;
+    border: solid black 1px;
+    margin: auto;
+    justify-content: center;
+
+}
+nav {
+    width: 90em;
+}
+
+.feedbox {
+    background-color: rgb(215, 231, 240);  
+    width: 97vw;
+    height:100vh;
+    display: block;  
+    align-items: center;
+    margin: auto;
+}
+
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+div > div {
+    box-sizing: border-box;
+    border: 2px solid #8c8c8c;
+    width: auto;
+    display: flex;
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+}
+
+header {  
+    background-color: rgb(9, 56, 158);  
+    position: fixed;  
+    left: 0;  
+    right: 0;  
+    top: 0px;  
+    height: 40px;  
+    width: 100vw;
+    display: flex;  
+    align-items: center;  
+    box-shadow: 0 0 0 0 rgb(4, 18, 56);  
+    }  
+header * {  
+    display: inline;  
+}  
+header li {  
+margin: 3vw;  
+}  
+header li a {  
+color: rgb(255, 255, 255);  
+text-decoration: none;  
+}  
+
+/* Create three unequal columns that floats next to each other */
+.column {
+    float: left;
+    padding: 10px;
+    height: auto;
+    border: solid navy 1px;
+    background-color: rgb(215, 231, 240);  
+    align-items:baseline;
+}
+
+/* Left and right column */
+.column.side {
+    width: 25%;
+}
+
+/* Middle column */
+.column.middle {
+    width: 50%;
+}
+
+/* Clear floats after the columns */
+.row:after {
+    content: "";
+    display: block;
+    clear: both;
+    }
+
+.column-group {
+   padding: 5px;
+}
+
+/* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+    .column.side, .column.middle {
+      width: 100%;
+    }
+  }
