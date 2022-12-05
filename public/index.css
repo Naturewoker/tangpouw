@@ -1,5 +1,7 @@
 * {
     box-sizing: border-box;
+    top: 0;
+    left: 0;
   }
 
 body   
@@ -7,12 +9,10 @@ body
 
 background-size: cover;  
 font-family: sans-serif;  
-background-color: rgb(9, 56, 158);  
+background-color: rgb(19, 81, 214);  
 }
 
 #container {
-    width: 95vw;
-    height: 80vw;
     border: solid black 1px;
     margin: auto;
     justify-content: center;
@@ -23,12 +23,10 @@ nav {
 }
 
 .feedbox {
-    background-color: rgb(215, 231, 240);  
-    width: 97vw;
-    height:100vh;
-    display: block;  
+    background-color: rgb(183, 193, 226);
     align-items: center;
     margin: auto;
+    border-radius: 20px;
 }
 
 .flex {
@@ -36,24 +34,10 @@ nav {
     flex-wrap: wrap;
   }
 
-div > div {
-    box-sizing: border-box;
-    border: 2px solid #8c8c8c;
-    width: auto;
-    display: flex;
-    text-align: center;
-    align-items: center;
-    justify-content: center;
-}
-
 header {  
-    background-color: rgb(9, 56, 158);  
-    position: fixed;  
-    left: 0;  
-    right: 0;  
-    top: 0px;  
-    height: 40px;  
-    width: 100vw;
+    background-color: background-color: rgb(19, 81, 214);  
+    ;   
+    height: 30px;  
     display: flex;  
     align-items: center;  
     box-shadow: 0 0 0 0 rgb(4, 18, 56);  
@@ -69,40 +53,81 @@ color: rgb(255, 255, 255);
 text-decoration: none;  
 }  
 
+.column-group {
+    display: grid;
+    grid-template-columns: 1fr 2.5fr 1fr;
+    padding: 20px;
+    /* border: solid red 1px; */
+}
+
 /* Create three unequal columns that floats next to each other */
 .column {
-    float: left;
-    padding: 10px;
-    height: auto;
-    border: solid navy 1px;
+    padding: 0px;
+    /* border: solid navy 1px; */
     background-color: rgb(215, 231, 240);  
-    align-items:baseline;
+    margin: 10px;
+    border-radius: 10px;
+    position: relative;
+    justify-content: center;
 }
 
-/* Left and right column */
-.column.side {
-    width: 25%;
+.topic {
+    position: absolute;
+    margin-left: auto;
+    margin-right: auto;
+    left: 0;
+    right: 0;
+    top: -20px;
+    border: solid rgba(26, 22, 0, 0.767) 1px;
+    width: fit-content;
+    padding: 5px;
+    text-align: center;
+    background-color: rgb(255, 196, 0);
+    border-radius: 5px;
+    font-size: x-large;
+    font-weight: bolder;
 }
 
-/* Middle column */
-.column.middle {
-    width: 50%;
+.picture-info {
+    display: flex;
+    background: url('https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ5CbdFJzQ5aHmVUQwCRE2ZQ4fnd3HkhZmxpQ&usqp=CAU');
+    height: 150px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    align-items: center;
+    justify-content: center;
+    color: rgba(254, 255, 254, 0.918);
+    font-size: x-large;
+    font-weight: bolder;
 }
 
-/* Clear floats after the columns */
-.row:after {
-    content: "";
-    display: block;
-    clear: both;
-    }
-
-.column-group {
-   padding: 5px;
+.info {
+    background-color: aliceblue;
+    height: 150px;
+    border-bottom-left-radius: 10px;
+    border-bottom-right-radius: 10px;
+    padding-top: 30px;
+    text-align: center;
+    color:rgb(0, 0, 0);
+    padding: 5px
+    
 }
-
 /* Responsive layout - makes the three columns stack on top of each other instead of next to each other */
 @media screen and (max-width: 600px) {
-    .column.side, .column.middle {
+    .column{
       width: 100%;
     }
   }
+
+.footer {  
+    display: flex;
+    color: aliceblue;
+    background-color: background-color: rgb(19, 81, 214);  
+    ;   
+    height: 30px;  
+    margin-top: 10px;
+    display: flex;  
+    align-items: center;  
+    justify-content: center;
+    box-shadow: 0 0 0 0 rgb(4, 18, 56);  
+} 
